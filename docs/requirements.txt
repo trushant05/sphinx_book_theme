@@ -1,0 +1,6 @@
+sphinx
+sphinx-book-theme
+sphinx-autobuild
+pyyaml
+typeguard
+myst-parser
