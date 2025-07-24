@@ -7,28 +7,9 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
 
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
-
-jobs:
-  check-secrets:
-    name: Check secrets
-    runs-on: ubuntu-latest
-    outputs:
-      trigger-deploy: ${{ steps.trigger-deploy.outputs.defined }}
-    steps:
-    - id: trigger-deploy
-      env:
-        REPO_NAME: ${{ secrets.REPO_NAME }}
-        BRANCH_REF: ${{ secrets.BRANCH_REF }}
-      if: "${{ github.repository == env.REPO_NAME && github.ref == env.BRANCH_REF }}"
-      run: echo "defined=true" >> "$GITHUB_OUTPUT"
-
   build-docs:
     name: Build Docs
     runs-on: ubuntu-latest
-    needs: [check-secrets]
 
     steps:
     - name: Checkout code
@@ -46,7 +27,6 @@ jobs:
 
     - name: Check branch docs building
       working-directory: ./docs
-      if: needs.check-secrets.outputs.trigger-deploy != 'true'
       run: make html
 
     - name: Upload docs artifact
@@ -58,8 +38,7 @@ jobs:
   deploy-docs:
     name: Deploy Docs
     runs-on: ubuntu-latest
-    needs: [check-secrets, build-docs]
-    if: needs.check-secrets.outputs.trigger-deploy == 'true'
+    needs: [build-docs]
 
     steps:
     - name: Download docs artifact
