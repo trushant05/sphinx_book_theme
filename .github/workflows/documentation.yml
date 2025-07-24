@@ -47,13 +47,7 @@ jobs:
     - name: Check branch docs building
       working-directory: ./docs
       if: needs.check-secrets.outputs.trigger-deploy != 'true'
-      run: make current-docs
-
-    - name: Generate multi-version docs
-      working-directory: ./docs
-      run: |
-        git fetch --prune --unshallow --tags
-        make multi-docs
+      run: make html
 
     - name: Upload docs artifact
       uses: actions/upload-artifact@v4
