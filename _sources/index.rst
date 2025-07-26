@@ -1,17 +1,31 @@
-.. Sphinx Book Theme documentation master file, created by
-   sphinx-quickstart on Wed Jul 23 22:12:57 2025.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+Welcome to Sphinx Book Theme Template
+=====================================
 
-Sphinx Book Theme documentation
-===============================
+**Sphinx Book Theme Template** repository provides jumpstart for documenting projects.
+The workflow is containerized and attempt is made to get things off the ground with
+minimum efforts.
 
-Add your content using ``reStructuredText`` syntax. See the
-`reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
-documentation for details.
+License
+=======
 
+Acknowledgement
+===============
+
+Table of Contents
+=================
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Sphinx Book Theme Template
+
+   source/setup/installation/index
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Getting Started
+   :titlesonly:
+
+   source/setup/quickstart
+
+
 
