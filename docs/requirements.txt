@@ -1,6 +1,13 @@
 sphinx
-sphinx-book-theme
+sphinx-book-theme==1.0.1
+sphinxcontrib-bibtex==2.5.0
+autodocsumm
 sphinx-autobuild
+sphinx-copybutton
+sphinx-icon
+sphinx_design
+sphinxemoji
+sphinx-tabs
 pyyaml
 typeguard
 myst-parser

@@ -24,15 +24,62 @@ with open(os.path.join(os.path.dirname(__file__), "..", "VERSION")) as f:
 # extensions coming ith Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    "autodocsumm",
     "myst_parser",
     "sphinx.ext.autodoc",
+    "sphinx.ext.autosummary",
     "sphinx.ext.napoleon",
+    "sphinx.ext.todo",
+    "sphinxemoji.sphinxemoji",
+    "sphinx.ext.githubpages",
+    "sphinx.ext.intersphinx",
+    "sphinx.ext.mathjax",
+    "sphinx.ext.viewcode",
+    "sphinxcontrib.bibtex",
+    "sphinxcontrib.icon",
+    "sphinx_copybutton",
+    "sphinx_design",
+    "sphinx_tabs.tabs"
 ]
+
+# mathjax hacks
+mathjax3_config = {
+    "tex": {
+        "inlineMath": [["\\(", "\\)"]],
+        "displayMath": [["\\[", "\\]"]],
+    },
+}
+
+# panels hacks
+panels_add_bootstrap_css = False
+panels_add_fontawesome_css = True
+
 
 # Supported file extensions for source files
 source_suffix = {
     '.rst': "restructuredtext",
     '.md': "markdown",
+}
+
+# put type hints inside the signature instead of the description (easier to maintain)
+autodoc_typehints = "signature"
+# autodoc_typehints_format = "fully-qualified"
+# document class *and* __init__ methods
+autoclass_content = "class"  #
+# separate class docstring from __init__ docstring
+autodoc_class_signature = "separated"
+# sort members by source order
+autodoc_member_order = "bysource"
+# inherit docstrings from base classes
+autodoc_inherit_docstrings = True
+# BibTeX configuration
+bibtex_bibfiles = ["source/_static/refs.bib"]
+# generate autosummary even if no references
+autosummary_generate = True
+autosummary_generate_overwrite = False
+# default autodoc settings
+autodoc_default_options = {
+    "autosummary": True,
 }
 
 # Add any paths that contain templates here, realative to this directory.
