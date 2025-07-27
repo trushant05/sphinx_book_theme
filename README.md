@@ -10,7 +10,7 @@ A customizable documentation template using the **Sphinx Book Theme**, designed 
 3. [Version Dependency](#version-dependency)
 4. [Prerequisites](#prerequisites)
 5. [License](#license)
-6. [Citation](#citation)
+6. [Acknowledgement](#acknowledgement)
 
 
 ## Key Features
@@ -26,32 +26,43 @@ A customizable documentation template using the **Sphinx Book Theme**, designed 
 
 ## Getting Started
 
+For the latest documentation, see [Sphinx Book Theme Template](https://github.com/trushant05/sphinx_book_theme_template). 
+
+
 ## Version Dependency
+
 
 ## Prerequisites 
 
+Ensure that your system is up with the following:
+- **Operating System**: Ubuntu 22.04
+- **GPU**: For additional information on GPU features and requirements, see [NVIDIA GPU Requirements](https://docs.omniverse.nvidia.com/dev-guide/latest/common/technical-requirements.html).
+
+
+## Troubleshooting
+Please see the [FAQ](), [Troubleshooting]() and [Known Issues]() for common questions, fixes, and workarounds.
+
+
+## Support
+Github [Issues]() should only be used to track executable pieces of work with a definite scope and a clear deliverable. These can be fixing bugs, documentation issues, new features, or general updates.
+
+
 ## License
 
-This project is licensed under the **MIT License**, a short and permissive open-source license.
-
-You are free to:
-  - Use the code and documentation for personal or commercial purposes
-  - Modify and adapt it to your needs
-  - Distribute your changes under the same license terms
-
-**Attribution is appreciated but not required.**  
-You can read the full license text in the [LICENSE](LICENSE) file.
+The license files of it depedencies and assets are present in the 
+['docs/licenses'](docs/licenses) directory.
 
 
-## Citation
+## Acknowledgement
 
 If you use Sphinx Book Theme Template, please consider citing:
 
 ```bibtex
 @misc{Sphinx Book Theme Template,
-    author = {Sphinx Book Theme Template Authors},
+    author = {Trushant Adeshara},
     title = {Sphinx Book Theme Template},
     month = {July},
     year = {2025},
     url = {https://github.com/trushant05/sphinx_book_theme_template}
 }
+```

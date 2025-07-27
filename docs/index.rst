@@ -16,16 +16,18 @@ Table of Contents
 
 .. toctree::
    :maxdepth: 2
-   :caption: Sphinx Book Theme Template
+   :caption: Sphinx Book Theme 
 
-   source/setup/installation/index
+   source/overview/summary
+   source/overview/release
 
 .. toctree::
    :maxdepth: 2
    :caption: Getting Started
    :titlesonly:
 
-   source/setup/quickstart
+   source/setup/installation/index
+   source/setup/help_faq/index
 
 
 
