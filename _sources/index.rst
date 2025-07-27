@@ -29,5 +29,18 @@ Table of Contents
    source/setup/installation/index
    source/setup/help_faq/index
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Source API
+   :titlesonly:
+
+   source/api/index
+
+.. toctree::
+   :maxdepth: 2
+   :caption: References
+
+   source/references/index
+
 
 
