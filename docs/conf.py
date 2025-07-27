@@ -32,14 +32,13 @@ extensions = [
     "sphinx.ext.todo",
     "sphinxemoji.sphinxemoji",
     "sphinx.ext.githubpages",
-    "sphinx.ext.intersphinx",
     "sphinx.ext.mathjax",
-    "sphinx.ext.viewcode",
     "sphinxcontrib.bibtex",
     "sphinxcontrib.icon",
     "sphinx_copybutton",
     "sphinx_design",
-    "sphinx_tabs.tabs"
+    "sphinx.ext.intersphinx",
+    "sphinx.ext.viewcode",
 ]
 
 # mathjax hacks
@@ -77,7 +76,7 @@ bibtex_bibfiles = ["source/_static/refs.bib"]
 # generate autosummary even if no references
 autosummary_generate = True
 autosummary_generate_overwrite = False
-# default autodoc settings
+# # default autodoc settings
 autodoc_default_options = {
     "autosummary": True,
 }
