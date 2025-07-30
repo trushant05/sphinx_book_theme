@@ -5,7 +5,7 @@ FROM python:3.10-slim
 LABEL maintainer="Trushant Adeshara <trushant@umich.edu>"
 
 # Set working directory
-WORKDIR /app
+WORKDIR /src
 
 # Install OS dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \

@@ -13,7 +13,7 @@ copyright = '2025, Trushant Adeshara'
 author = 'Trushant Adeshara'
 
 # Read verson from the package
-with open(os.path.join(os.path.dirname(__file__), "VERSION")) as f:
+with open(os.path.join(os.path.dirname(__file__), "..", "VERSION")) as f:
     full_version = f.read().strip()
     version = ".".join(full_version.split(".")[:3])
 
