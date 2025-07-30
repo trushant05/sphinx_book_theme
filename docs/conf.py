@@ -13,7 +13,7 @@ copyright = '2025, Trushant Adeshara'
 author = 'Trushant Adeshara'
 
 # Read verson from the package
-with open(os.path.join(os.path.dirname(__file__), "..", "VERSION")) as f:
+with open(os.path.join(os.path.dirname(__file__), "VERSION")) as f:
     full_version = f.read().strip()
     version = ".".join(full_version.split(".")[:3])
 
@@ -39,6 +39,7 @@ extensions = [
     "sphinx_design",
     "sphinx.ext.intersphinx",
     "sphinx.ext.viewcode",
+    "sphinx_multiversion",
 ]
 
 # mathjax hacks
@@ -123,4 +124,32 @@ html_theme_options = {
     "use_edit_page_button": True,
     "show_toc_level": 1,
     "use_sidenotes": True,
+    "logo": {
+        "text": "Sphinx Book Theme Template"
+    },
+    "icon_links": [
+            {
+                "name": "GitHub",
+                "url": "https://github.com/trushant05/sphinx_book_theme_template",
+                "icon": "fa-brands fa-square-github",
+                "type": "fontawesome",
+            },
+            {
+                "name": "Isaac Sim",
+                "url": "https://developer.nvidia.com/isaac-sim",
+                "icon": "https://img.shields.io/badge/IsaacSim-4.5.0-silver.svg",
+                "type": "url",
+            },
+            {
+                "name": "Stars",
+                "url": "https://img.shields.io/github/stars/trushant05/sphinx_book_theme_template?color=fedcba",
+                "icon": "https://img.shields.io/github/stars/trushant05/sphinx_book_theme_template?color=fedcba",
+                "type": "url",
+            },
+        ],
+        "icon_links_label": "Quick Links",
+    }
+
+html_sidebars = {
+    "**": ["navbar-logo.html", "versioning.html", "icon-links.html", "search-field.html", "sbt-sidebar-nav.html"]
 }

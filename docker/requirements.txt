@@ -7,6 +7,7 @@ sphinx-icon
 sphinx_design
 sphinxcontrib-bibtex
 sphinx-copybutton
+sphinx-multiversion
 pyyaml
 typeguard
 myst-parser
