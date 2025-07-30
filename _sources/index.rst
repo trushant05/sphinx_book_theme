@@ -5,12 +5,6 @@ Welcome to Sphinx Book Theme Template
 The workflow is containerized and attempt is made to get things off the ground with
 minimum efforts.
 
-License
-=======
-
-Acknowledgement
-===============
-
 Table of Contents
 =================
 
