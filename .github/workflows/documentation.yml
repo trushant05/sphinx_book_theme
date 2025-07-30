@@ -23,7 +23,7 @@ jobs:
         architecture: x64
 
     - name: Install dev requirements
-      working-directory: ./docs
+      working-directory: ./docker
       run: pip install -r requirements.txt
 
     - name: Check branch docs building
